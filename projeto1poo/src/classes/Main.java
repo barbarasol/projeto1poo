@@ -52,6 +52,18 @@ public class Main {
 			System.out.println("Sexo: "+usuario.getSexo());
 		}
 		
+		//Agendar vacinação
+		int dosesDiarias1 = 3;
+		int dosesDiarias2 = 2;
+		System.out.println("Informe a cidade:");
+		String cidade = input.next();
+		if(cidade.equalsIgnoreCase("Aguas Claras")) {
+			System.out.println("Informe a vacina");
+			System.out.println(dosesDiarias1);
+		}else if(cidade.equalsIgnoreCase("Taguatinga")) {
+			System.out.println(dosesDiarias2);
+		}
+		
 		
 		System.out.println(" --------------------------- ");
 		Administrador admin = new Administrador();
