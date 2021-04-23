@@ -11,7 +11,7 @@ public class Main {
 		ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
 	
 		
-		for (int i =0; i<2; i++) {
+		/*for (int i =0; i<2; i++) {
 			Usuario novoUsu = new Usuario();
 			System.out.println("Informe o nome:");
 			novoUsu.setNome(input.next());
@@ -50,19 +50,32 @@ public class Main {
 			System.out.println("Idade: "+usuario.getIdade());
 			System.out.println("Telefone:" + usuario.getTelefone());
 			System.out.println("Sexo: "+usuario.getSexo());
-		}
+		}*/
 		
 		//Agendar vacinação
 		int dosesDiarias1 = 3;
 		int dosesDiarias2 = 2;
+		System.out.println(" ---------------------------------------------------------");
+		System.out.println("|    Pontos de Vacinação:     |     Vacinas Disponíveis:   |");
+		System.out.println("|       Aguas Claras          |            H1N1            |");
+		System.out.println("|        Brazlandia           |          Hepatite B        |");
+		System.out.println("|        Ceilandia            |         Febre Amarela      |");
+		System.out.println("|        Cruzeiro             |           CoronaVac        |");
+		System.out.println("|          Gama               |          AstraZeneca       |");
+		System.out.println("|       Plano Piloto          |          Antitetânica      |");
+		System.out.println("|        Taguatinga           |           Antirrábica      |");
+		System.out.println(" ----------------------------------------------------------");
+		System.out.println("Realizar agendamento:");
 		System.out.println("Informe a cidade:");
 		String cidade = input.next();
-		if(cidade.equalsIgnoreCase("Aguas Claras")) {
-			System.out.println("Informe a vacina");
-			System.out.println(dosesDiarias1);
-		}else if(cidade.equalsIgnoreCase("Taguatinga")) {
-			System.out.println(dosesDiarias2);
-		}
+		//if(cidade.equalsIgnoreCase("Aguas Claras")) {
+			//System.out.println("Informe a vacina");
+			
+			//if 
+			//System.out.println(dosesDiarias1);
+		//}else if(cidade.equalsIgnoreCase("Taguatinga")) {
+		//	System.out.println(dosesDiarias2);
+		//}
 		
 		
 		System.out.println(" --------------------------- ");
