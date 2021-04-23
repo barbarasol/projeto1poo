@@ -3,6 +3,7 @@ package classes;
 public class Vacina {
 	private String nomeVacina;
 	private int qtdeDoses;
+	
 	public String getNomeVacina() {
 		return nomeVacina;
 	}

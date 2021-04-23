@@ -5,6 +5,7 @@ public class Usuario extends Pessoa{
 	private String telefone; 
 	private String sexo;
 	private int idade;
+	
 	public String getEmail() {
 		return email;
 	}
