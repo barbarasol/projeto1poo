@@ -10,7 +10,7 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		Scanner sc = new Scanner(System.in); 
-				
+		ArrayList<Usuario> usuarios = new ArrayList<Usuario>();		
 		int flag;
 		do {
 			flag = 0;
@@ -19,9 +19,7 @@ public class Main {
 			System.out.println("2 - Administrador");
 			int op = sc.nextInt();
 			switch(op) {
-			   case 1:
-				   ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
-					
+			   case 1:		
 					for (int i =0; i<2; i++) {
 						Usuario novoUsu = new Usuario();
 						System.out.println("Cadastro:");
@@ -100,16 +98,17 @@ public class Main {
 					System.out.println("Informe o Cpf:");
 					admin.setCpf(input.nextLine());
 					
+					
 					//confirmarvacinacao
 					System.out.println("Informe o Cpf do vacinado:");
 					String cpfVacinado = input.nextLine();
-				//	for (Usuario usuario : usuarios) {
-					//	if(cpfVacinado.equals(usuario.getCpf())) {
+					for (Usuario usuario1 : usuarios) {
+						if(cpfVacinado.equals(usuario1.getCpf())) {
 							
-				//		}
+						}
 							
 						
-					//}
+					}
 			
 					
 					System.out.println("-----------------------------");
