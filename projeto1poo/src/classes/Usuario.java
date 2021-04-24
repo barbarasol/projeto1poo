@@ -1,11 +1,21 @@
 package classes;
 
+import java.util.ArrayList;
+
 public class Usuario extends Pessoa{
 	private String email;
 	private String telefone; 
 	private String sexo;
 	private int idade;
+	private ArrayList<Vacinacao> vacinacoes = new ArrayList<Vacinacao>();
+
 	
+	public ArrayList<Vacinacao> getVacinacoes() {
+		return vacinacoes;
+	}
+	public void setVacinacoes(ArrayList<Vacinacao> vacinacoes) {
+		this.vacinacoes = vacinacoes;
+	}
 	public String getEmail() {
 		return email;
 	}
