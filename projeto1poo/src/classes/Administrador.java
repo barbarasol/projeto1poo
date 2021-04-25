@@ -19,8 +19,4 @@ public class Administrador extends Pessoa implements PermitirAcesso{
 		return login.equals("admin") && senha.equals("admin");
 	}
 
-	
-	
-	
-
 }
