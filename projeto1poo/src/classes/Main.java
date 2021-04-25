@@ -143,6 +143,20 @@ public class Main {
 						
 						break;
 				   case 3:
+					   System.out.println("Pessoas vacinadas:");
+					   for (Vacinado vacinado : vacinados) {
+						   System.out.println("---------------------");
+						   System.out.println("Nome: " + vacinado.getNome());
+						   System.out.println("CPF: "+vacinado.getCpf());
+						   System.out.println("RG: "+ vacinado.getRg());
+						   System.out.println("Cidade: "+vacinado.getCidade());
+						   System.out.println("Email: "+vacinado.getEmail());
+						   System.out.println("Telefone: "+vacinado.getTelefone());
+						   System.out.println("Sexo: "+vacinado.getSexo());
+						   System.out.println("Idade: "+vacinado.getIdade());
+						   System.out.println("Vacinação: " + vacinado.getVacinacoes());					
+							   
+					 }
 					   //apresentar vacinados no ponto aguas claras
 					   
 					   //apresentar vacinados no ponto taguatinga
