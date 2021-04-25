@@ -12,7 +12,7 @@ public class Main {
 		Scanner sc = new Scanner(System.in); 
 		ArrayList<Usuario> usuarios = new ArrayList<Usuario>();		
 		ArrayList<Vacinado> vacinados = new ArrayList<Vacinado>();
-		
+				
 		int flag;
 		int exitflag = 0;
 		int flag2;
@@ -58,8 +58,7 @@ public class Main {
 							System.out.println("Informe a idade:");
 							novoUsu.setIdade(sc.nextInt());
 							
-							System.out.println("---------------");
-							System.out.println("Agendamento:");
+							System.out.println("-------Agendamento--------");
 							System.out.println(" ---------------------------------------------------------");
 							System.out.println("|    Pontos de Vacinação:     |     Vacinas Disponíveis:   |");
 							System.out.println("|       Aguas Claras          |            H1N1            |");
@@ -77,11 +76,12 @@ public class Main {
 							String local = input.nextLine();
 							
 							Vacinacao vacinacao = new Vacinacao();
-							vacinacao.setNomeVacina(local);
+							vacinacao.setPontoVacinacao(local);
 							vacinacao.setDoses(ds);
 							vacinacao.setNomeVacina(nm);
 							
 							novoUsu.getVacinacoes().add(vacinacao);
+						
 							
 							usuarios.add(novoUsu);
 							
@@ -126,9 +126,7 @@ public class Main {
 										vacinado.setSexo(usuario1.getSexo());
 										vacinado.setIdade(usuario1.getIdade());
 										vacinado.setVacinacoes(usuario1.getVacinacoes());
-										
-										for(int x=0; x < usuario1.getVacinacoes().
-																				
+																																							
 										vacinados.add(vacinado);
 									}
 								}
@@ -160,16 +158,9 @@ public class Main {
 							   System.out.println("Telefone: "+vacinado.getTelefone());
 							   System.out.println("Sexo: "+vacinado.getSexo());
 							   System.out.println("Idade: "+vacinado.getIdade());
-							   System.out.println("Vacinação: " + vacinado.getVacinacoes());
-								   
+							   System.out.println("Vacinação: " + vacinado.getVacinacoes());	   
 						 }
-					   }
-					   //apresentar vacinados no ponto aguas claras
-					   
-					   //apresentar vacinados no ponto taguatinga
-					   
-					   //apresentar vacinados no ponto plano piloto
-						
+					   }						
 						break;
 				   case 4:
 					   System.exit(0);
