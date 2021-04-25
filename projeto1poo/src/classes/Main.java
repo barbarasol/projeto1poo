@@ -3,6 +3,8 @@ package classes;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import interfaces.PermitirAcesso;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -14,6 +16,7 @@ public class Main {
 		int flag;
 		int exitflag = 0;
 		int flag2;
+		int flag3;
 		do {
 			flag = 0;
 			while(exitflag == 0) {
@@ -86,24 +89,8 @@ public class Main {
 						    	flag2= 1;
 						    }	
 					   }while(flag2==0);
-								
-						
-					   //apresentando usuários
-						for (Usuario usuario : usuarios) {
-							System.out.println("-----------------");
-							System.out.println("Nome: " + usuario.getNome());
-							System.out.println("Email: "+ usuario.getEmail());
-							System.out.println("Cpf: " + usuario.getCpf());
-							System.out.println("Rg: "+ usuario.getRg());
-							System.out.println("Cidade: "+ usuario.getCidade());
-							System.out.println("Idade: "+usuario.getIdade());
-							System.out.println("Telefone:" + usuario.getTelefone());
-							System.out.println("Sexo: "+usuario.getSexo());
-						}
 						break;
-				   case 2:
-					   //entrar
-						System.out.println(" --------------------------- ");
+				   case 2:					   
 						Administrador admin = new Administrador();
 						
 						System.out.println("Informe sua matrícula:");
@@ -112,35 +99,54 @@ public class Main {
 						System.out.println("Informe o Cpf:");
 						admin.setCpf(input.nextLine());
 						
+						System.out.println("Informe o login:");
+						String lgn = input.nextLine();
 						
-						//confirmarvacinacao
-						Vacinado vacinado = new Vacinado();
-						System.out.println("Informe o Cpf do vacinado:");
-						String cpfVacinado = input.nextLine();
-						for (Usuario usuario1 : usuarios) {
-							if(cpfVacinado.equals(usuario1.getCpf())) {
-								vacinado.setNome(usuario1.getNome());
-								vacinado.setCpf(usuario1.getCpf());
-								vacinado.setRg(usuario1.getRg());
-								vacinado.setCidade(usuario1.getCidade());
-								vacinado.setEmail(usuario1.getEmail());
-								vacinado.setTelefone(usuario1.getTelefone());
-								vacinado.setSexo(usuario1.getSexo());
-								vacinado.setIdade(usuario1.getIdade());
-																
-								vacinados.add(vacinado);
-							}
+						System.out.println("Informe a senha:");
+						String snh = input.nextLine();
+						
+						PermitirAcesso administ = new Administrador(); 
+												
+						if(administ.autenticar(lgn, snh)) {
+							do {
+								flag3=0;
+								Vacinado vacinado = new Vacinado();
+								System.out.println("Informe o Cpf do vacinado:");
+								String cpfVacinado = input.nextLine();
+								for (Usuario usuario1 : usuarios) {
+									if(cpfVacinado.equals(usuario1.getCpf())) {
+										vacinado.setNome(usuario1.getNome());
+										vacinado.setCpf(usuario1.getCpf());
+										vacinado.setRg(usuario1.getRg());
+										vacinado.setCidade(usuario1.getCidade());
+										vacinado.setEmail(usuario1.getEmail());
+										vacinado.setTelefone(usuario1.getTelefone());
+										vacinado.setSexo(usuario1.getSexo());
+										vacinado.setIdade(usuario1.getIdade());
+										vacinado.setVacinacoes(usuario1.getVacinacoes());
+																																		
+										vacinados.add(vacinado);
+									}
+								}
+								
+								System.out.println("Deseja inserir novo vacinado? Sim ou Não");
+								String continuar = input.nextLine();
+								if(continuar.equals(continuar)) {
+									flag3=1;
+								}
+							}while(flag3==1);
+							
+						}else {
+							System.out.println("Acesso não permitido!");
 						}
 						
-						System.out.println("-----------------------------");
-						/*System.out.println("------------------");
-						System.out.println("Dados administrador");
-						System.out.println("Matricula: "+admin.getMatricula());
-						System.out.println("Cpf: " + admin.getCpf());*/
-			
 						break;
 				   case 3:
+					   //apresentar vacinados no ponto aguas claras
 					   
+					   //apresentar vacinados no ponto taguatinga
+					   
+					   //apresentar vacinados no ponto plano piloto
 						
 						break;
 				   case 4:
