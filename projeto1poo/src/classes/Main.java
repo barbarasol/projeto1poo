@@ -124,7 +124,8 @@ public class Main {
 										vacinado.setSexo(usuario1.getSexo());
 										vacinado.setIdade(usuario1.getIdade());
 										vacinado.setVacinacoes(usuario1.getVacinacoes());
-																																		
+										
+																																												
 										vacinados.add(vacinado);
 									}
 								}
