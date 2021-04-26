@@ -12,6 +12,8 @@ public class Main {
 		Scanner sc = new Scanner(System.in); 
 		ArrayList<Usuario> usuarios = new ArrayList<Usuario>();		
 		ArrayList<Vacinado> vacinados = new ArrayList<Vacinado>();
+	
+		
 				
 		int flag;
 		int exitflag = 0;
@@ -126,7 +128,7 @@ public class Main {
 										vacinado.setSexo(usuario1.getSexo());
 										vacinado.setIdade(usuario1.getIdade());
 										vacinado.setVacinacoes(usuario1.getVacinacoes());
-																																							
+																																																	
 										vacinados.add(vacinado);
 									}
 								}
@@ -158,7 +160,21 @@ public class Main {
 							   System.out.println("Telefone: "+vacinado.getTelefone());
 							   System.out.println("Sexo: "+vacinado.getSexo());
 							   System.out.println("Idade: "+vacinado.getIdade());
-							   System.out.println("Vacinação: " + vacinado.getVacinacoes());	   
+							   System.out.println("Dados da vacinação:");
+							   
+							   Vacinacao v = new Vacinacao();
+							   
+							   ArrayList itens = new ArrayList();
+							   
+							   itens.addAll(vacinado.getVacinacoes());
+							   
+							   for (int x=0; x <itens.size(); x++) {
+								   v = (Vacinacao) itens.get(x);
+								   System.out.println("Nome vacina: " + v.getNomeVacina());
+								   System.out.println("Dose: " + v.getDoses());
+								   System.out.println("Ponto de vacinação: " + v.getPontoVacinacao());
+							   }
+							   							   
 						 }
 					   }						
 						break;
